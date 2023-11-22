@@ -3,15 +3,15 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-console.log(import.meta.env.VITE_API);
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBt0B3XIw43pjmhbsmXobGyDkuCDdOa7D4",
-  authDomain: "acelearn-react-project.firebaseapp.com",
-  projectId: "acelearn-react-project",
-  storageBucket: "acelearn-react-project.appspot.com",
-  messagingSenderId: "429141667351",
-  appId: "1:429141667351:web:882f45391781f82b0f3652"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
