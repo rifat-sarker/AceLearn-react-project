@@ -1,4 +1,6 @@
 import Banner from "../../Banner/Banner";
+import Contact from "../../Contact/Contact";
+import Footer from "../../Footer/Footer";
 import Services from "../../Services/Services";
 import Navbar from "../../shared/Navbar/Navbar";
 
@@ -9,6 +11,8 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner> 
             <Services></Services> 
+            <Contact></Contact>
+            <Footer></Footer>
         </div>
     );
 };
