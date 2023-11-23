@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/9T1h0R3/1-V-Jp13-Lvt-Vc2-Ii-Y2fp4q-Yw.webp",
+      "courseName": "Introduction to Web Development",
+      "description": "Learn the basics of web development, including HTML, CSS, and JavaScript.",
+      "price": "$49.99",
+      "buttonText": "Details"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/TKYhyzj/generic-blog-thumbnail-2-1-1-750x375.png",
+      "courseName": "Data Science Fundamentals",
+      "description": "Explore the foundations of data science, from statistics to machine learning.",
+      "price": "$69.99",
+      "buttonText": "Details"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/LYbvsBS/Graphics-Design-Mastery-1-scaled.jpg",
+      "courseName": "Graphic Design Mastery",
+      "description": "Master the art of graphic design using industry-standard tools and techniques.",
+      "price": "$54.99",
+      "buttonText": "Details"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/JKFkCSM/0-ww7r-UUVAzqc-Yd-VTM.png",
+      "courseName": "Mobile App Development with React Native",
+      "description": "Build cross-platform mobile apps with React Native for iOS and Android.",
+      "price": "$79.99",
+      "buttonText": "Details"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/ZJrjGVX/digital-marketing-definition-new.webp",
+      "courseName": "Digital Marketing Strategies",
+      "description": "Learn effective digital marketing strategies for online businesses.",
+      "price": "$59.99",
+      "buttonText": "Details"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/QJJwWrg/1-57-YDg0-Esn-SBYs-Tnw-YPk-SDg.jpg",
+      "courseName": "Introduction to Artificial Intelligence",
+      "description": "Explore the fundamentals of artificial intelligence and machine learning.",
+      "price": "$64.99",
+      "buttonText": "Details"
+    }
+  ]
+  

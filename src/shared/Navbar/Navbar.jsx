@@ -13,6 +13,9 @@ const Navbar = () => {
             <Link to='/'><button className="btn">Home</button></Link>
           </li>
           <li>
+            <Link to='/services'><button className="btn">Services</button></Link>
+          </li>
+          <li>
             <Link to='/login'><button className="btn">Login</button></Link>
           </li>
           <li>
