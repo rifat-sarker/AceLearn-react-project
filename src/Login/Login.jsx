@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Navbar from "../shared/Navbar/Navbar";
 
 const Login = () => {
 const{logIn}= useContext(AuthContext)
+const [success, setSuccess] = useState('')
+const [registerError, setRegisterError] = useState('')
+
+
   const handleLogIn =(e)=> {
     e.preventDefault();
     const form = new FormData(e.currentTarget)
@@ -12,13 +16,25 @@ const{logIn}= useContext(AuthContext)
     const password = form.get('password')
     console.log(email, password);
 
+    //clear success and error
+    setSuccess('');
+    setRegisterError('');
+
+
+
+    
+    
+   
+
   // login
   logIn(email, password)
   .then(result => {
     console.log(result.user);
+    setSuccess('logged in successfully')
+    
   })
   .catch(error => {
-    console.log(error);
+    console.log(error.message);
   })
     
   }
@@ -66,6 +82,12 @@ const{logIn}= useContext(AuthContext)
               <button className="btn btn-primary">Login</button>
             </div>
             <p>Don't have an account? Please <Link className=" btn text-blue-400" to='/register'>Register</Link></p>
+            {
+              registerError && <p className="text-red-600">{registerError}</p>
+            }
+            {
+              success && <p className="text-green-700">{success}</p>
+            }
           </form>
         </div>
       </div>

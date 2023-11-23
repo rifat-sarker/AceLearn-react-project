@@ -10,6 +10,9 @@ const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
+            <Link to='/'><button className="btn">Home</button></Link>
+          </li>
+          <li>
             <Link to='/login'><button className="btn">Login</button></Link>
           </li>
           <li>
