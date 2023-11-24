@@ -35,8 +35,8 @@ const Navbar = () => {
           <span className="text-fuchsia-400">Learn</span>
         </a>
       </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">{navlinks}</ul>
+      <div className="flex-none  font-bold ">
+        <ul className="menu menu-horizontal  px-1">{navlinks}</ul>
         
         {user ? (
           <><p></p><img className="w-10 rounded-full mr-4" src={userPicture} alt="" /><button onClick={signOut}>Sign Out</button></>
