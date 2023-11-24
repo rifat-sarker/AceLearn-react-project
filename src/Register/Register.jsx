@@ -2,42 +2,55 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext, useState } from "react";
 import Navbar from "../shared/Navbar/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [success, setSuccess] = useState("");
   const [registerError, setRegisterError] = useState("");
-  
+  const [showPassword, setShowPassword] = useState(false);
+
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
-    const passwordPattern = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$/;
-
     console.log(name, email, password);
     // reset success and error
     setSuccess("");
     setRegisterError("");
 
-    // login conditions
-    if(!passwordPattern.test(password)){
-      setRegisterError("Password requirements: 8-20 characters, 1 number, 1 capital letter, 1 symbol.")
+    if (password.length < 6) {
+      setRegisterError("Password should be at least 6 characters or longer");
       return;
     }
-
+     else if (!/[A-Z]/.test(password)) {
+      setRegisterError("Your password should have at least one upper character");
+      return;
+    } 
+    
+   
+  
     //create user
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        setSuccess("Account created successfully");
+        toast.success("Accound created successfully", {
+          duration: 2000,
+          position: "bottom-center",
+        });
+        // setSuccess("Account created successfully");
       })
       .catch((error) => {
         console.log(error);
         setRegisterError(error.message);
       });
   };
+
   return (
     <div>
       <Navbar></Navbar>
@@ -72,17 +85,23 @@ const Register = () => {
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control relative ">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Your Password"
                   name="password"
                   className="input input-bordered"
                   required
                 />
+                <span
+                  className="absolute top-12 right-2"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
@@ -96,7 +115,7 @@ const Register = () => {
               {success && <p className="text-green-700">{success}</p>}
               {registerError && <p className="text-red-600">{registerError}</p>}
             </form>
-           
+            <ToastContainer></ToastContainer>
           </div>
         </div>
       </div>

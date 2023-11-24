@@ -1,0 +1,53 @@
+{
+    "courses": [
+      {
+        "id": 1,
+        "title": "Introduction to HTML",
+        "description": "Learn the fundamentals of HTML, the standard markup language for creating web pages.",
+        "author": "John Doe",
+        "duration": "4 weeks",
+        "level": "Beginner"
+      },
+      {
+        "id": 2,
+        "title": "CSS Styling Techniques",
+        "description": "Explore advanced CSS styling techniques to make your web pages visually appealing.",
+        "author": "Jane Smith",
+        "duration": "6 weeks",
+        "level": "Intermediate"
+      },
+      {
+        "id": 3,
+        "title": "JavaScript Fundamentals",
+        "description": "Get started with JavaScript and understand its core concepts for web development.",
+        "author": "Sam Johnson",
+        "duration": "8 weeks",
+        "level": "Intermediate"
+      },
+      {
+        "id": 4,
+        "title": "React.js Crash Course",
+        "description": "Learn the basics of React.js and build interactive user interfaces for your web applications.",
+        "author": "Emily White",
+        "duration": "5 weeks",
+        "level": "Intermediate"
+      },
+      {
+        "id": 5,
+        "title": "Node.js for Backend Development",
+        "description": "Discover how to use Node.js to build scalable and efficient server-side applications.",
+        "author": "Alex Brown",
+        "duration": "7 weeks",
+        "level": "Advanced"
+      },
+      {
+        "id": 6,
+        "title": "Full Stack Web Development",
+        "description": "Become a full-stack developer by combining front-end and back-end technologies in real-world projects.",
+        "author": "Chris Miller",
+        "duration": "12 weeks",
+        "level": "Advanced"
+      }
+    ]
+  }
+  

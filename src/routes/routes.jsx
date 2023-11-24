@@ -3,8 +3,11 @@ import Root from "../layout/Root";
 import Home from "../pages/Home/Home";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
-import Service from "../Service/Service";
 import Services from "../Services/Services";
+import Details from "../Details/Details";
+import PrivateRoute from "./PrivateRoute";
+import About from "../About/About";
+import Blogs from "../Blogs/Blogs";
 
 
 
@@ -15,11 +18,24 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
             },
             {
                 path: '/services',
-                element: <Services></Services>
+                element: <PrivateRoute><Services></Services></PrivateRoute>
+            },
+            {
+                path: '/blogs',
+                element: <PrivateRoute><Blogs></Blogs></PrivateRoute>,
+                
+            },
+            {
+                path: '/details/:id',
+                element: <PrivateRoute><Details></Details></PrivateRoute>
+            },
+            {
+                path: '/about',
+                element: <PrivateRoute><About></About></PrivateRoute>
             },
             {
                 path: '/login',
